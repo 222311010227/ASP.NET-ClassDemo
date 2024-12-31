@@ -11,7 +11,7 @@
         <div>
         </div>
         <p style="width: 1245px; height: 586px">
-            <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Add.xml" Height="500px" Width="500px" />
+            <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Add.xml" Height="500px" Width="700px" />
         </p>
     </form>
 </body>
