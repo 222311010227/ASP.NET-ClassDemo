@@ -1,10 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Advertisements>
 	<Ad>
-		<ImageUrl>D:\6th SEM\ASP.Net\ClassDemo\ClassDemo\IMG-20241223-WA0099.jpg</ImageUrl>
-		<Keywords>Brother's</Keywords>
+		<ImageUrl>D:\6th SEM\ASP.Net\ClassDemo\ClassDemo\2.jpg.jpg</ImageUrl>
+		<Keyword>Brother's</Keyword>
 		<NavigateUrl>www.google.com</NavigateUrl>
 		<AlternateText>Kuldip</AlternateText>
 		<Impression>3</Impression>
+	</Ad>
+	<Ad>
+		<ImageUrl>D:\6th SEM\ASP.Net\ClassDemo\ClassDemo\1.jpg</ImageUrl>
+		<Keyword>Kuldip</Keyword>
+		<NavigateUrl>www.google.com</NavigateUrl>
+		<AlternateText>It's Me</AlternateText>
+		<Impression>1</Impression>
 	</Ad>
 </Advertisements>
