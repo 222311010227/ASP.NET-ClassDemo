@@ -1,17 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Advertisements>
 	<Ad>
-		<ImageUrl>D:\6th SEM\ASP.Net\ClassDemo\ClassDemo\2.jpg.jpg</ImageUrl>
-		<Keyword>Brother's</Keyword>
+		<ImageUrl>3.jpg</ImageUrl>
+		<Keyword>Amit</Keyword>
 		<NavigateUrl>www.google.com</NavigateUrl>
-		<AlternateText>Kuldip</AlternateText>
+		<AlternateText>It's Amit</AlternateText>
 		<Impression>3</Impression>
 	</Ad>
 	<Ad>
-		<ImageUrl>D:\6th SEM\ASP.Net\ClassDemo\ClassDemo\1.jpg</ImageUrl>
+		<ImageUrl>2.jpg</ImageUrl>
 		<Keyword>Kuldip</Keyword>
 		<NavigateUrl>www.google.com</NavigateUrl>
 		<AlternateText>It's Me</AlternateText>
-		<Impression>1</Impression>
+		<Impression>3</Impression>
+	</Ad>
+	<Ad>
+		<ImageUrl>1.jpg</ImageUrl>
+		<Keyword>Brother</Keyword>
+		<NavigateUrl>www.google.com</NavigateUrl>
+		<AlternateText>All</AlternateText>
+		<Impression>3</Impression>
 	</Ad>
 </Advertisements>
