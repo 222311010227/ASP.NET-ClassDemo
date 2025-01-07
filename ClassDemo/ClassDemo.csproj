@@ -74,6 +74,7 @@
     <Content Include="2.jpg" />
     <Content Include="3.jpg" />
     <Content Include="Calander.aspx" />
+    <Content Include="Master_Page.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -91,10 +92,25 @@
     <Compile Include="Calander.aspx.designer.cs">
       <DependentUpon>Calander.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Master_Page.aspx.cs">
+      <DependentUpon>Master_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master_Page.aspx.designer.cs">
+      <DependentUpon>Master_Page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
