@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ClassDemo
 {
-    public partial class AD : System.Web.UI.Page
+    public partial class AD : Page
     {
         protected Label Label1;
         protected FileUpload FileUpload1;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Any initialization logic goes here
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -20,18 +20,24 @@ namespace ClassDemo
             {
                 try
                 {
-                    string filename = FileUpload1.FileName; // Corrected property name
-                    string filePath = Server.MapPath("D:\\6th SEM\\ASP.Net\\ClassDemo\\ClassDemo\\Files\\") + filename; // Ensured correct path
-                    FileUpload1.SaveAs(filePath); // Corrected variable name
-                    Label1.Text = "File Uploaded!";
+                    string filename = FileUpload1.FileName; // Get the uploaded file name
+                    string filePath = Server.MapPath("~/Files/") + filename; // Use relative path
+
+                    // Save the file to the specified path
+                    FileUpload1.SaveAs(filePath);
+
+                    // Display a success message
+                    Label1.Text = "File Uploaded Successfully!";
                 }
                 catch (Exception ex)
                 {
+                    // Display the error message
                     Label1.Text = "Error: " + ex.Message;
                 }
             }
             else
             {
+                // Display a message when no file is selected
                 Label1.Text = "No file selected.";
             }
         }

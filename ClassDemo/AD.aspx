@@ -1,21 +1,29 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AD.aspx.cs" Inherits="ClassDemo.AD" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Ad Rotator and File Upload</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <!-- AdRotator Control -->
+            <asp:AdRotator
+                ID="AdRotator1"
+                runat="server"
+                AdvertisementFile="~/Advertisements.xml"
+                Width="300px"
+                Height="250px" />
+            
+            <br /><br />
+
+            <!-- File Upload Section -->
+            <asp:FileUpload ID="FileUpload1" runat="server" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload Image" />
+            <br />
+            <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
         </div>
-        <p style="width: 879px; height: 211px">
-            <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Add.xml" Height="100px" Width="100px" />
-        </p>
-        <p style="width: 1245px; height: 586px">
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-        </p>
     </form>
 </body>
 </html>
