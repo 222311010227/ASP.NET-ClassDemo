@@ -1,48 +1,63 @@
 ﻿using System;
-using System.Web.UI;
 
-namespace ClassDemo
+namespace b_lecture
 {
-    public partial class MultiView : Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                MultiView1.ActiveViewIndex = 0; // Set default view to View 1
+                MultiView1.ActiveViewIndex = 0; // Set the initial view
             }
         }
 
-        // Navigate to View 2
-        protected void btnToView2_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 1;
+            // Navigate to View2
+            MultiView1.SetActiveView(view2);
         }
 
-        // Navigate to View 1
-        protected void btnToView1_Click(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 0;
+            // Generate the summary and navigate to View3
+            string name = TextBox1.Text;
+            string gender = DropDownList1.SelectedValue;
+            string address = TextBox2.Text;
+            string degree = TextBox3.Text;
+            string email = TextBox4.Text;
+            string contact = TextBox5.Text;
+
+            LabelSummary.Text = $@"
+                <b>Student Information:</b><br />
+                Name: {name}<br />
+                Gender: {gender}<br />
+                Address: {address}<br />
+                Degree: {degree}<br /><br />
+                <b>Contact Information:</b><br />
+                Email: {email}<br />
+                Contact No: {contact}<br />
+            ";
+
+            MultiView1.SetActiveView(view3);
         }
 
-        // Navigate to View 3
-        protected void btnToView3_Click(object sender, EventArgs e)
+        protected void Button4_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 2;
+            // Navigate back to View1
+            MultiView1.SetActiveView(view1);
         }
 
-        // Navigate to View 2 from View 3
-        protected void btnToView2From3_Click(object sender, EventArgs e)
+        protected void Button5_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 1;
+            // Navigate back to View2
+            MultiView1.SetActiveView(view2);
         }
 
-        // Event handler for active view changes (optional)
-        protected void MultiView1_ActiveViewChanged(object sender, EventArgs e)
+        protected void Button6_Click(object sender, EventArgs e)
         {
-            // Example: Log the current view index (if needed)
-            int currentIndex = MultiView1.ActiveViewIndex;
-            Response.Write($"Active view changed to index: {currentIndex}");
+            // Navigate back to View1 or clear form if needed
+            MultiView1.SetActiveView(view1);
         }
     }
 }
