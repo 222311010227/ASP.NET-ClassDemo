@@ -18,6 +18,7 @@
                 <h3>STUDENT INFORMATION</h3>
                 Name:
                 <asp:TextBox ID="TextBox1" runat="server" Height="31px" Width="145px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Name is Required!" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 <br />
                 <br />
                 Gender:
